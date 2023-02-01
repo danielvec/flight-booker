@@ -21,10 +21,11 @@ Airport.create!(
 
 Flight.create!(
   [
-    {time: DateTime.now, duration: 60, origin_id: 1, destination_id: 2},
-    {time: DateTime.now, duration: 60, origin_id: 1, destination_id: 3},
-    {time: DateTime.now, duration: 90, origin_id: 1, destination_id: 4},
-    {time: DateTime.now, duration: 300, origin_id: 1, destination_id: 5},
+    {time: DateTime.now + 1, duration: 60, origin_id: 1, destination_id: 2},
+    {time: DateTime.now + 2, duration: 60, origin_id: 1, destination_id: 3},
+    {time: DateTime.now + 3, duration: 90, origin_id: 1, destination_id: 4},
+    {time: DateTime.now + 4, duration: 300, origin_id: 1, destination_id: 5},
+    {time: DateTime.now + 4, duration: 300, origin_id: 2, destination_id: 4},
   ]
 )
 
