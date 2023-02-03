@@ -5,10 +5,16 @@
 
     <%= select_tag(:destination_id, options_for_select(@airport_options), prompt: "Destination") %>
 
-    <%= select_tag(:date, options_for_select(@date_options), prompt: "Date") %>
+    <%= select_tag(:date, options_for_select(@date_options), prompt: "Date", required: true) %>
 
     <%= select_tag(:passengers, options_for_select(1..10), prompt: "Passengers") %>
 
     <%= form.submit "Search", :class => "button" %>
   <% end %>
 </div>
+<% @flights.each do |flight| %>
+  <p>
+    <%= flight.time.strftime("%l:%M%P") %> -
+    <%= (flight.time + flight.duration.minutes).strftime("%l:%M%P") %><br>
+  </p> 
+<% end %>
