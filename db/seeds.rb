@@ -13,20 +13,37 @@ Airport.create!(
   [
     {code: "LAX"},
     {code: "SFO"},
-    {code: "PHX"},
+    {code: "SEA"},
     {code: "PDX"},
-    {code: "DTW"}
+    {code: "SAN"}
   ]
 )
 
-Flight.create!(
+18.times do Flight.create!(
   [
-    {time: DateTime.now + 1, duration: 60, origin_id: 1, destination_id: 2},
-    {time: DateTime.now + 2, duration: 60, origin_id: 1, destination_id: 3},
-    {time: DateTime.now + 3, duration: 90, origin_id: 1, destination_id: 4},
-    {time: DateTime.now + 4, duration: 300, origin_id: 1, destination_id: 5},
-    {time: DateTime.now + 4, duration: 300, origin_id: 2, destination_id: 4},
+    {time: DateTime.now.beginning_of_day + 1 + rand(0.0..4.0), duration: 60, origin_id: 1, destination_id: 2},
+    {time: DateTime.now.beginning_of_day + 2 + rand(0.0..4.0), duration: 180, origin_id: 1, destination_id: 3},
+    {time: DateTime.now.beginning_of_day + 3 + rand(0.0..4.0), duration: 140, origin_id: 1, destination_id: 4},
+    {time: DateTime.now.beginning_of_day + 4 + rand(0.0..4.0), duration: 60, origin_id: 1, destination_id: 5},
+    {time: DateTime.now.beginning_of_day + 1 + rand(0.0..4.0), duration: 60, origin_id: 2, destination_id: 1},
+    {time: DateTime.now.beginning_of_day + 2 + rand(0.0..4.0), duration: 90, origin_id: 2, destination_id: 3},
+    {time: DateTime.now.beginning_of_day + 3 + rand(0.0..4.0), duration: 60, origin_id: 2, destination_id: 4},
+    {time: DateTime.now.beginning_of_day + 4 + rand(0.0..4.0), duration: 90, origin_id: 2, destination_id: 5},
+    {time: DateTime.now.beginning_of_day + 1 + rand(0.0..4.0), duration: 180, origin_id: 3, destination_id: 1},
+    {time: DateTime.now.beginning_of_day + 2 + rand(0.0..4.0), duration: 90, origin_id: 3, destination_id: 2},
+    {time: DateTime.now.beginning_of_day + 3 + rand(0.0..4.0), duration: 60, origin_id: 3, destination_id: 4},
+    {time: DateTime.now.beginning_of_day + 4 + rand(0.0..4.0), duration: 200, origin_id: 3, destination_id: 5},
+    {time: DateTime.now.beginning_of_day + 1 + rand(0.0..4.0), duration: 140, origin_id: 4, destination_id: 1},
+    {time: DateTime.now.beginning_of_day + 2 + rand(0.0..4.0), duration: 60, origin_id: 4, destination_id: 2},
+    {time: DateTime.now.beginning_of_day + 3 + rand(0.0..4.0), duration: 60, origin_id: 4, destination_id: 3},
+    {time: DateTime.now.beginning_of_day + 4 + rand(0.0..4.0), duration: 160, origin_id: 4, destination_id: 5},
+    {time: DateTime.now.beginning_of_day + 1 + rand(0.0..4.0), duration: 60, origin_id: 5, destination_id: 1},
+    {time: DateTime.now.beginning_of_day + 2 + rand(0.0..4.0), duration: 90, origin_id: 5, destination_id: 2},
+    {time: DateTime.now.beginning_of_day + 3 + rand(0.0..4.0), duration: 200, origin_id: 5, destination_id: 3},
+    {time: DateTime.now.beginning_of_day + 4 + rand(0.0..4.0), duration: 160, origin_id: 5, destination_id: 4}
   ]
 )
+  p "Created #{Airport.count} Airports"
+end
 
 p "Created #{Airport.count} Airports"
