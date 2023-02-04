@@ -13,8 +13,11 @@
   <% end %>
 </div>
 <% @flights.each do |flight| %>
-  <p>
+  <p class="flight">
     <%= flight.time.strftime("%l:%M%P") %> -
     <%= (flight.time + flight.duration.minutes).strftime("%l:%M%P") %><br>
+    <%= flight.time.strftime("%m/%d/%Y") %><br>
+    <%= @airport_options[flight.origin_id - 1][0] %> ->
+    <%= @airport_options[flight.destination_id - 1][0] %>
   </p> 
 <% end %>

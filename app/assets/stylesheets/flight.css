@@ -1,4 +1,13 @@
+*{
+  background-color: rgb(222, 239, 246);
+}
+
 select {
   height: 34px;
   width: 222px;
+  background-color: white;
+}
+
+.flight {
+  background-color: white;
 }
