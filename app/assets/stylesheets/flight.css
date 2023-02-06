@@ -1,13 +1,76 @@
 *{
-  background-color: rgb(222, 239, 246);
+  margin: 0;
+  padding: 0;
 }
 
 select {
-  height: 34px;
-  width: 222px;
+  height: 5vh;
+  background-color: white;
+  font-size: 3vh;
+}
+
+.flight, .time {
   background-color: white;
 }
 
 .flight {
-  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: solid rgb(137, 137, 137) 1px;
+  height: 7vh;
 }
+
+.time {
+  font-size: 24px;
+}
+
+.page {
+  height: 100vh;
+  background-image: url('westcoast.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+  gap: 15px;
+}
+
+h1 {
+  margin-left: 22px;
+}
+
+.form {
+  height: 50vh;
+  width: 522px;
+  background-color: rgb(255, 255, 255);
+  margin-left: 22px;
+  padding: 3vh;
+  border-radius: 4px;
+}
+
+.flights {
+  width: 522px;
+  height: 50vh;
+  padding: 15px;
+}
+
+.choice {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+  padding-bottom: 1vh;
+}
+
+.search-button, .button {
+  background-color: rgb(42, 42, 167);
+  color: white;
+  border: none;
+  height: 5vh;
+  width: 100%;
+  border-radius: 3px;
+}
+
