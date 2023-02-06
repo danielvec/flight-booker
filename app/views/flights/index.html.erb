@@ -1,23 +1,48 @@
-<h1>Flights</h1>
-<div class="form">
-  <%= form_with url: "/flights", method: :get do |form| %>
-    <%= select_tag(:origin_id, options_for_select(@airport_options), prompt: "Origin") %>
-
-    <%= select_tag(:destination_id, options_for_select(@airport_options), prompt: "Destination") %>
-
-    <%= select_tag(:date, options_for_select(@date_options), prompt: "Date", required: true) %>
-
-    <%= select_tag(:passengers, options_for_select(1..10), prompt: "Passengers") %>
-
-    <%= form.submit "Search", :class => "button" %>
-  <% end %>
+<div class="page">
+  <h1>West Coast Flights</h1>
+  <div class="forms">
+      <%= form_with url: "/flights", method: :get, class: "form" do |form| %>
+        <h2>Book a Flight</h2>
+        <div class="choice">
+          <%= form.label :origin_id %>
+          <%= select_tag(:origin_id, options_for_select(@airport_options)) %>
+        </div>
+        <div class="choice">
+          <%= form.label :destination_id %>
+          <%= select_tag(:destination_id, options_for_select(@airport_options)) %>
+        </div>
+        <div class="choice">
+          <%= form.label :date %>
+          <%= select_tag(:date, options_for_select(@date_options), required: true) %>
+        </div>
+        <div class="choice">
+          <%= form.label :passengers %>
+          <%= select_tag(:passengers, options_for_select(1..10)) %>
+        </div>
+        <%= form.submit "Find Flights", :class => "search-button" %>
+      <% end %>
+      <%= form_with url: "/bookings/new", method: :get, class: "flights" do |form| %>
+        <% @flights.each do |flight| %>
+          <div class="flight">
+            <div class="radio">
+              <%= form.radio_button :flight, flight.id %>
+            </div>
+            <div class="time">
+              <%= flight.time.strftime("%l:%M%P") %> -
+              <%= (flight.time + flight.duration.minutes).strftime("%l:%M%P") %><br>
+            </div>
+            <div class="date">
+              <%= flight.time.strftime("%m/%d/%Y") %><br>
+            </div>
+            <div class="codes">
+              <%= @airport_options[flight.origin_id - 1][0] %> ->
+              <%= @airport_options[flight.destination_id - 1][0] %>
+            </div>
+          </div> 
+        <% end %>
+        <% unless @flights.empty? %>
+          <%= form.submit "Submit", :class => "button" %>
+        <% end %>
+      <% end %>
+  </div>
 </div>
-<% @flights.each do |flight| %>
-  <p class="flight">
-    <%= flight.time.strftime("%l:%M%P") %> -
-    <%= (flight.time + flight.duration.minutes).strftime("%l:%M%P") %><br>
-    <%= flight.time.strftime("%m/%d/%Y") %><br>
-    <%= @airport_options[flight.origin_id - 1][0] %> ->
-    <%= @airport_options[flight.destination_id - 1][0] %>
-  </p> 
-<% end %>
