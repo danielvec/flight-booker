@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Oswald:wght@300&display=swap');
+
 *{
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  font-family: Lora;
+  font-size: 5vh;
+  padding-top: 1vh;
+  color: white;
 }
 
 select {
