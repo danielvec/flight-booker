@@ -44,6 +44,7 @@ select {
 .forms {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   padding-top: 10vh;
   gap: 15px;
 }
@@ -53,8 +54,8 @@ h1 {
 }
 
 .form {
+  width: min(522px, 50vw);
   height: 50vh;
-  width: 522px;
   background-color: rgb(255, 255, 255);
   margin-left: 22px;
   padding: 3vh;
@@ -62,9 +63,11 @@ h1 {
 }
 
 .flights {
-  width: 522px;
-  height: 50vh;
-  padding: 15px;
+  width: min(522px, 56vw);
+  height: fit-content;
+  padding: 3vh;
+  margin-left: 22px;
+  border-radius: 4px;
 }
 
 .choice {
