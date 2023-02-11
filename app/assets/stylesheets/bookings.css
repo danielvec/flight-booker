@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Oswald:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.bookings {
+  height: 100vh;
+  background-image: url('westcoast.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  padding-top: 10vh;
+  gap: 5vw;
+  justify-content: center;
+}
+
+.bookings .form {
+  width: fit-content;
+  background-color: white;
+  height: fit-content;
+  max-height: 75vh;
+  padding: 2vh;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  border-radius: 5px;
+  font-size: 3vh;
+  overflow-y: scroll;
+}
+
+.bookings .flight {
+  background-color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 4vh;
+  border-radius: 5px;
+  font-size: 2.5vh;
+}
+
+.bookings h4 {
+  margin-top: 2vh;
+}
+
+.bookings input {
+  width: min(430px, 43vw);
+  height: 6vh;
+  font-size: 2.5vh;
+  margin-top: 2vh;
+  padding-left: 2vh;
+}
+
+.bookings .button {
+  width: min(450px, 45vw);
+}
