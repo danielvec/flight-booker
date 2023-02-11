@@ -1,6 +1,31 @@
-<h2>Bookings</h2>
-<%= @flight.time.strftime("%l:%M%P") %> -
-<%= (@flight.time + @flight.duration.minutes).strftime("%l:%M%P") %><br>
-<%= @flight.time.strftime("%m/%d/%Y") %><br>
-<%= @origin.code %><br>
-<%= @destination.code %><br>
+<div class="bookings">
+  <div class="form">
+    <h2>Traveler Details</h2>
+    <%= form_with model: @booking do |form| %>
+      <%= form.hidden_field :flight, :value => params[:flight] %>
+      <%= form.fields_for :passengers do |sub_form| %>
+        <h4>Passenger <%= sub_form.options[:child_index] + 1 %></h4>
+        <%= sub_form.text_field :first_name, required: true, placeholder: "First Name" %><br>
+
+        <%= sub_form.text_field :last_name, required: true, placeholder: "Last Name" %><br>
+
+        <%= sub_form.text_field :email, required: true, placeholder: "Email Address" %><br>
+      <% end %>
+      <%= form.submit "Submit", :class => "button" %>
+    <% end %>
+  </div>
+  <div class="flight">
+    <h2>Summary</h2>
+    <h3>Flight</h3>
+    <%= @origin.code %>-
+    <%= @destination.code %><br>
+    <%= @flight.time.strftime("%m/%d/%Y") %><br>
+    <%= @flight.time.strftime("%l:%M%P") %> -
+    <%= (@flight.time + @flight.duration.minutes).strftime("%l:%M%P") %><br>
+    <% if @passengers > 1 %>
+      <%= @passengers %> Tickets
+    <% else %>
+      1 Ticket
+    <% end %>
+  </div>
+</div>
