@@ -1,4 +1,4 @@
-<div class="page">
+<div class="flights">
   <h1>West Coast Flights</h1>
   <div class="forms">
       <%= form_with url: "/flights", method: :get, class: "form" do |form| %>
@@ -21,7 +21,7 @@
         </div>
         <%= form.submit "Find Flights", :class => "search-button" %>
       <% end %>
-      <%= form_with url: "/bookings/new", method: :get, class: "flights" do |form| %>
+      <%= form_with url: "/bookings/new", method: :get, class: "flights-form" do |form| %>
         <% @flights.each do |flight| %>
           <div class="flight">
             <div class="radio">
