@@ -5,24 +5,24 @@
   padding: 0;
 }
 
-h1 {
+.flights h1 {
   font-family: Lora;
   font-size: 5vh;
   padding-top: 1vh;
   color: white;
 }
 
-select {
+.flights select {
   height: 5vh;
   background-color: white;
   font-size: 3vh;
 }
 
-.flight, .time {
+.flights .flight, .flights .time {
   background-color: white;
 }
 
-.flight {
+.flights .flight {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -30,18 +30,18 @@ select {
   height: 7vh;
 }
 
-.time {
-  font-size: 24px;
+.flights .time {
+  font-size: 3.2vh;
 }
 
-.page {
+.flights {
   height: 100vh;
   background-image: url('westcoast.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.forms {
+.flights .forms {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -49,11 +49,11 @@ select {
   gap: 15px;
 }
 
-h1 {
+.flights h1 {
   margin-left: 22px;
 }
 
-.form {
+.flights .form {
   width: min(522px, 50vw);
   height: 50vh;
   background-color: rgb(255, 255, 255);
@@ -62,7 +62,7 @@ h1 {
   border-radius: 4px;
 }
 
-.flights {
+.flights .flights-form {
   width: min(522px, 56vw);
   height: fit-content;
   padding: 3vh;
@@ -70,14 +70,14 @@ h1 {
   border-radius: 4px;
 }
 
-.choice {
+.flights .choice {
   display: flex;
   flex-direction: column;
   gap: 0.5vh;
   padding-bottom: 1vh;
 }
 
-.search-button, .button {
+.flights .search-button, .button {
   background-color: rgb(42, 42, 167);
   color: white;
   border: none;
