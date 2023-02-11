@@ -26,6 +26,7 @@
           <div class="flight">
             <div class="radio">
               <%= form.radio_button :flight, flight.id %>
+              <%= form.hidden_field :passengers, :value => params[:passengers] %>
             </div>
             <div class="time">
               <%= flight.time.strftime("%l:%M%P") %> -
