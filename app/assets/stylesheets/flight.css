@@ -30,8 +30,8 @@
   height: 7vh;
 }
 
-.flights .time {
-  font-size: 3.2vh;
+.flights .time, .date, .codes {
+  font-size: min(2.9vw,2.9vh);
 }
 
 .flights {
@@ -54,19 +54,17 @@
 }
 
 .flights .form {
-  width: min(522px, 50vw);
+  width: min(522px, 58vw);
   height: 50vh;
   background-color: rgb(255, 255, 255);
-  margin-left: 22px;
   padding: 3vh;
   border-radius: 4px;
 }
 
 .flights .flights-form {
-  width: min(522px, 56vw);
+  width: min(522px, 65vw);
   height: fit-content;
   padding: 3vh;
-  margin-left: 22px;
   border-radius: 4px;
 }
 
