@@ -16,12 +16,15 @@
   </div>
   <div class="flight">
     <h2>Summary</h2>
-    <h3>Flight</h3>
-    <%= @origin.code %>-
-    <%= @destination.code %><br>
-    <%= @flight.time.strftime("%m/%d/%Y") %><br>
-    <%= @flight.time.strftime("%l:%M%P") %> -
-    <%= (@flight.time + @flight.duration.minutes).strftime("%l:%M%P") %><br>
+    <h3>Your Trip</h3>
+    <div class="flight-info">
+      Flying from <%= @origin.code %> to 
+      <%= @destination.code %><br>
+      <%= @flight.time.strftime("%b %e") %>, 
+      <%= @flight.time.strftime("%l:%M %P") %> to 
+      <%= (@flight.time + @flight.duration.minutes).strftime("%l:%M %P") %><br>
+      Nonstop<br>
+    </div>
     <% if @passengers > 1 %>
       <%= @passengers %> Tickets
     <% else %>

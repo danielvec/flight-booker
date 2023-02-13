@@ -16,6 +16,14 @@
   justify-content: center;
 }
 
+.bookings .flight-info {
+  border: solid rgb(113, 113, 113) 1px;
+  border-radius: 4px;
+  padding: 1vw;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+
 .bookings .form {
   width: fit-content;
   background-color: white;
