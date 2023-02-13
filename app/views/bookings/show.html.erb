@@ -1,11 +1,12 @@
 <div class="bookings">
   <div class="form">
-    <h2>Confirmation</h2>
+    <h2>Review and Pay</h2>
     <% @booking.passengers.each do |passenger| %>
       First Name: <%= passenger.first_name %><br>
       Last Name: <%= passenger.last_name %><br>
       Email: <%= passenger.email %><br>
     <% end %>
+    <%= link_to "Proceed to Payment", new_charge_path(:charge => { :booking_id => params[:id], :passengers => @booking.passengers.count }) %>
   </div>
   <div class="flight">
     <%= @flight.time.strftime("%l:%M%P") %> -
