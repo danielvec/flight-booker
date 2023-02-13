@@ -72,3 +72,5 @@ group :development, :test do
   gem "webdrivers"
   gem "faker"
 end
+
+gem 'simplecov', require: false, group: :test
