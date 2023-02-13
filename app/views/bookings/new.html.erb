@@ -30,5 +30,7 @@
     <% else %>
       1 Ticket
     <% end %>
+    <br>
+    Total: $<%= @flight.price * @passengers %>.00 ($<%= @flight.price %>.00 x <%= @passengers %>)
   </div>
 </div>

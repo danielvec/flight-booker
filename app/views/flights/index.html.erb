@@ -39,6 +39,9 @@
               <%= @airport_options[flight.origin_id - 1][0] %> ->
               <%= @airport_options[flight.destination_id - 1][0] %>
             </div>
+            <div class="price">
+              $<%= flight.price %>
+            </div>
           </div> 
         <% end %>
         <% unless @flights.empty? %>

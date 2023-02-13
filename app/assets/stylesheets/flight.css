@@ -25,13 +25,18 @@
 .flights .flight {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   border-bottom: solid rgb(137, 137, 137) 1px;
   height: 7vh;
 }
 
-.flights .time, .date, .codes {
+.flights .time, .flights .date, .flights .codes, .flights .price {
   font-size: min(2.9vw,2.9vh);
+}
+
+.flights .price {
+  color: green;
+  font-weight: bold;
 }
 
 .flights {
