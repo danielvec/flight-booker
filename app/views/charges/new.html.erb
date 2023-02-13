@@ -1,0 +1,21 @@
+<div class="charges">
+  <%= form_tag charges_path do %>
+    <%= hidden_field_tag "price", @price %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+      <label class="amount">
+        <span>Amount: $<%= @price %>.00</span>
+      </label>
+    </article>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="Flight Ticket(s)"
+            data-amount=<%= (@price * 100) %>
+            data-locale="auto"></script>
+  <% end %>
+</div>param
