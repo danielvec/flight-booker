@@ -1,15 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Oswald:wght@300&display=swap');
-
-*{
-  margin: 0;
-  padding: 0;
-}
 
 .bookings {
-  height: 100vh;
-  background-image: url('westcoast.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   padding-top: 10vh;
   gap: 5vw;

@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Lora';
+  font-size: 5vh;
+  padding-top: 1vh;
+  color: white;
+  margin-left: 22px;
+}
+
+.page {
+  height: 100vh;
+  background-image: url('westcoast.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
