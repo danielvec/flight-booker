@@ -4,6 +4,8 @@ class ChargesController < ApplicationController
     @passengers = params[:charge][:passengers].to_i
     @flight = Flight.find(@booking.flight_id)
     @price = @flight.price * @passengers
+    @origin = Airport.find(@flight.origin_id)
+    @destination = Airport.find(@flight.destination_id)
   end
   
   def create

@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
     @flight = Flight.find(@booking.flight_id)
     @origin = Airport.find(@flight.origin_id)
     @destination = Airport.find(@flight.destination_id)
+    @passengers = @booking.passengers.count
   end
 
   def new
