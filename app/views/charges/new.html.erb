@@ -1,5 +1,6 @@
 <div class="charges">
   <%= form_tag charges_path do %>
+    <h2>Payment</h2>
     <%= hidden_field_tag "price", @price %>
     <article>
       <% if flash[:error].present? %>
@@ -8,7 +9,7 @@
         </div>
       <% end %>
       <label class="amount">
-        <span>Amount: $<%= @price %>.00</span>
+        Order Total: $<%= @price %>.00
       </label>
     </article>
 

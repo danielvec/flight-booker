@@ -1,10 +1,17 @@
 <div class="bookings">
   <div class="form">
-    <h2>Review and Pay</h2>
-    <% @booking.passengers.each do |passenger| %>
-      First Name: <%= passenger.first_name %><br>
-      Last Name: <%= passenger.last_name %><br>
-      Email: <%= passenger.email %><br>
+    <h2>Review your Booking</h2>
+    <% @booking.passengers.each_with_index do |passenger, index| %>
+      <h4>Passenger <%= index + 1 %></h4>
+      <div class="input">
+        First Name: <%= passenger.first_name %><br>
+      </div>
+      <div class="input">
+        Last Name: <%= passenger.last_name %><br>
+      </div>
+      <div class="input">
+        Email: <%= passenger.email %><br>
+      </div>
     <% end %>
     <%= link_to "Proceed to Payment", new_charge_path(:charge => { :booking_id => params[:id], :passengers => @booking.passengers.count }) %>
   </div>

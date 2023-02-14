@@ -40,12 +40,19 @@
   margin-top: 2vh;
 }
 
-.bookings input {
+.bookings input, .bookings .input {
   width: min(430px, 43vw);
   height: 6vh;
   font-size: 2.5vh;
   margin-top: 2vh;
   padding-left: 2vh;
+}
+
+.bookings .input {
+  height: 4vh;
+  font-size: 3vh;
+  padding-left: 0;
+  padding-right: 2vh;
 }
 
 .bookings .button {
