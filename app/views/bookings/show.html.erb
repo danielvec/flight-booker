@@ -8,11 +8,5 @@
     <% end %>
     <%= link_to "Proceed to Payment", new_charge_path(:charge => { :booking_id => params[:id], :passengers => @booking.passengers.count }) %>
   </div>
-  <div class="flight">
-    <%= @flight.time.strftime("%l:%M%P") %> -
-    <%= (@flight.time + @flight.duration.minutes).strftime("%l:%M%P") %><br>
-    <%= @flight.time.strftime("%m/%d/%Y") %><br>
-    <%= @origin.code %><br>
-    <%= @destination.code %><br>
-  </div>
+  <%= render 'flight_summary' %>
 </div>

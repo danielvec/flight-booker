@@ -14,23 +14,5 @@
       <%= form.submit "Submit", :class => "button" %>
     <% end %>
   </div>
-  <div class="flight">
-    <h2>Summary</h2>
-    <h3>Your Trip</h3>
-    <div class="flight-info">
-      Flying from <%= @origin.code %> to 
-      <%= @destination.code %><br>
-      <%= @flight.time.strftime("%b %e") %>, 
-      <%= @flight.time.strftime("%l:%M %P") %> to 
-      <%= (@flight.time + @flight.duration.minutes).strftime("%l:%M %P") %><br>
-      Nonstop<br>
-    </div>
-    <% if @passengers > 1 %>
-      <%= @passengers %> Tickets
-    <% else %>
-      1 Ticket
-    <% end %>
-    <br>
-    Total: $<%= @flight.price * @passengers %>.00 ($<%= @flight.price %>.00 x <%= @passengers %>)
-  </div>
+  <%= render 'flight_summary' %>
 </div>
