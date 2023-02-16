@@ -1,27 +1,20 @@
 
 .bookings {
   display: flex;
-  padding-top: 10vh;
-  gap: 5vw;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+  gap: 3vw;
   justify-content: center;
-}
-
-.bookings .flight-info {
-  border: solid rgb(113, 113, 113) 1px;
-  border-radius: 4px;
-  padding: 1vw;
-  margin-bottom: 1vh;
-  margin-top: 1vh;
+  
+  flex-wrap: wrap-reverse;
 }
 
 .bookings .form {
-  width: fit-content;
   background-color: white;
+  width: min(500px, 50vw);
   height: fit-content;
   max-height: 75vh;
-  padding: 2vh;
-  padding-top: 3vh;
-  padding-bottom: 3vh;
+  padding: 3vh;
   border-radius: 5px;
   font-size: 3vh;
   overflow-y: scroll;
@@ -41,7 +34,7 @@
 }
 
 .bookings input, .bookings .input {
-  width: min(430px, 43vw);
+  width: 95%;
   height: 6vh;
   font-size: 2.5vh;
   margin-top: 2vh;
@@ -56,5 +49,5 @@
 }
 
 .bookings .button {
-  width: min(450px, 45vw);
+  width: 100%;
 }

@@ -1,16 +1,18 @@
 
 .charges {
   display: flex;
+  flex-wrap: wrap-reverse;
   padding-top: 10vh;
   gap: 5vw;
   justify-content: center;
 }
 
-.charges form {
+.charges .form {
   height: 15vh;
   width: min(430px, 43vw);
   border-radius: 5px;
-  padding: 3vh;
-  font-size: 2vw;
+  padding: 4vh;
+  font-size: 3vh;
   background-color: white;
+  margin-bottom: auto;
 }
