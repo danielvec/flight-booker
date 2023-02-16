@@ -18,7 +18,15 @@
           <%= form.label :passengers %>
           <%= select_tag(:passengers, options_for_select(1..10)) %>
         </div>
+        <%= hidden_field_tag :searching, true %>
         <%= form.submit "Find Flights", :class => "search-button" %>
+        <div class="flash">
+          <% flash.each do |type, msg| %>
+            <div>
+              <%= msg %>
+            </div>
+          <% end %>
+        </div>
       <% end %>
       <%= form_with url: "/bookings/new", method: :get, class: "flights-form" do |form| %>
         <% @flights.each do |flight| %>

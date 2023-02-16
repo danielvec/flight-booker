@@ -54,3 +54,11 @@ h1 {
   margin-bottom: 1vh;
   margin-top: 1vh;
 }
+
+.flash {
+  color: green;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3vh;
+  margin-top: 0.5vh;
+}
