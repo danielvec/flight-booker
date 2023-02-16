@@ -19,31 +19,32 @@ Airport.create!(
   ]
 )
 
-18.times do Flight.create!(
+22.times do Flight.create!(
   [
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 60, origin_id: 1, destination_id: 2, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 180, origin_id: 1, destination_id: 3, price: rand(150..250) },
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 140, origin_id: 1, destination_id: 4, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 60, origin_id: 1, destination_id: 5, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 60, origin_id: 2, destination_id: 1, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 90, origin_id: 2, destination_id: 3, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 60, origin_id: 2, destination_id: 4, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 90, origin_id: 2, destination_id: 5, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 180, origin_id: 3, destination_id: 1, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 90, origin_id: 3, destination_id: 2, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 60, origin_id: 3, destination_id: 4, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 200, origin_id: 3, destination_id: 5, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 140, origin_id: 4, destination_id: 1, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 60, origin_id: 4, destination_id: 2, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 60, origin_id: 4, destination_id: 3, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 160, origin_id: 4, destination_id: 5, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 60, origin_id: 5, destination_id: 1, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 90, origin_id: 5, destination_id: 2, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 200, origin_id: 5, destination_id: 3, price: rand(150..250)},
-    {time: DateTime.now.beginning_of_day + rand(1.0..8.0), duration: 160, origin_id: 5, destination_id: 4, price: rand(150..250)}
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 60, origin_id: 1, destination_id: 2, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 180, origin_id: 1, destination_id: 3, price: rand(150..250) },
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 140, origin_id: 1, destination_id: 4, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 60, origin_id: 1, destination_id: 5, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 60, origin_id: 2, destination_id: 1, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 90, origin_id: 2, destination_id: 3, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 60, origin_id: 2, destination_id: 4, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 90, origin_id: 2, destination_id: 5, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 180, origin_id: 3, destination_id: 1, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 90, origin_id: 3, destination_id: 2, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 60, origin_id: 3, destination_id: 4, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 200, origin_id: 3, destination_id: 5, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 140, origin_id: 4, destination_id: 1, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 60, origin_id: 4, destination_id: 2, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 60, origin_id: 4, destination_id: 3, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 160, origin_id: 4, destination_id: 5, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 60, origin_id: 5, destination_id: 1, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 90, origin_id: 5, destination_id: 2, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 200, origin_id: 5, destination_id: 3, price: rand(150..250)},
+    {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 160, origin_id: 5, destination_id: 4, price: rand(150..250)}
   ]
 )
   p "Created #{Airport.count} Airports"
 end
 
+p 1
 p "Created #{Airport.count} Airports"
