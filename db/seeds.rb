@@ -43,8 +43,6 @@ Airport.create!(
     {time: DateTime.current.beginning_of_day + rand(91.0..98.0), duration: 160, origin_id: 5, destination_id: 4, price: rand(150..250)}
   ]
 )
-  p "Created #{Airport.count} Airports"
 end
 
-p 1
-p "Created #{Airport.count} Airports"
+p "Created #{Flight.count} Flights"

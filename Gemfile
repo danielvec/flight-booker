@@ -77,3 +77,7 @@ group :development, :test do
 end
 
 gem 'simplecov', require: false, group: :test
+
+group :test do
+  gem 'database_cleaner-active_record'
+end
