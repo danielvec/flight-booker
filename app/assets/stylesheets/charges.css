@@ -7,7 +7,7 @@
   justify-content: center;
 }
 
-.charges .form {
+.charges .form, .container {
   height: 15vh;
   width: min(430px, 43vw);
   border-radius: 5px;
@@ -15,4 +15,8 @@
   font-size: 3vh;
   background-color: white;
   margin-bottom: auto;
+}
+
+.container {
+  margin-top: 4vh;
 }
