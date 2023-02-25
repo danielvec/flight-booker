@@ -1,23 +1,25 @@
 <div class="charges">
-  <%= form_tag charges_path do %>
-    <h2>Payment</h2>
-    <%= hidden_field_tag "price", @price %>
-    <article>
-      <% if flash[:error].present? %>
-        <div id="error_explanation">
-          <p><%= flash[:error] %></p>
-        </div>
-      <% end %>
-      <label class="amount">
-        Order Total: $<%= @price %>.00
-      </label>
-    </article>
+  <div class="form">
+    <%= form_with url: charges_path do |form| %>
+      <h2>Payment</h2>
+      <%= hidden_field_tag "price", @price %>
+      <article>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+        <label class="amount">
+          Order Total: $<%= @price %>.00
+        </label>
+      </article>
 
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-            data-description="Flight Ticket(s)"
-            data-amount=<%= (@price * 100) %>
-            data-locale="auto"></script>
-  <% end %>
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="Flight Ticket(s)"
+              data-amount=<%= (@price * 100) %>
+              data-locale="auto"></script>
+    <% end %>
+  </div>
   <%= render 'flight_summary' %>
 </div>
