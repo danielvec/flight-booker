@@ -1,24 +1,22 @@
-# README
+# Flight Booker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my implementation of the Flight Booker project from the [The Odin Project](https://www.theodinproject.com/lessons/ruby-on-rails-flight-booker).
 
-Things you may want to cover:
+<img src="flightbooker.png" alt="private events homepage" width=auto height="400px"/><br>
 
-* Ruby version
+## Project Requirements
 
-* System dependencies
+The goal of this project is to build a site which allows users to book a one-way flight.
 
-* Configuration
+**Features**
 
-* Database creation
+- Allows users to search for flights from dropdown menus from forms prepopulated with collections of data.
 
-* Database initialization
+- Uses nested forms to allow for multiple passengers on a single booking.
 
-* How to run the test suite
+- Allows users to make a payment with the Stripe API
 
-* Services (job queues, cache servers, search engines, etc.)
+## Rspec Tests
 
-* Deployment instructions
-
-* ...
+To run the tests, enter:  
+`rspec`
