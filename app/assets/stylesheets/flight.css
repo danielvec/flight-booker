@@ -48,7 +48,7 @@
 }
 
 .flights .flights-form {
-  width: min(522px, 65vw);
+  width: min(522px, 75vw);
   height: fit-content;
   padding: 3vh;
   border-radius: 4px;
