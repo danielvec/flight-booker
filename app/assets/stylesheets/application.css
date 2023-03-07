@@ -39,7 +39,7 @@ h1 {
 
 .flight-summary {
   background-color: white;
-  width: min(350px, 45vw);
+  width: min(350px, 61vw);
   height: fit-content;
   padding: 4vh;
   border-radius: 5px;

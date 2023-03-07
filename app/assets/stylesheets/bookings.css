@@ -10,7 +10,7 @@
 
 .bookings .form {
   background-color: white;
-  width: min(500px, 50vw);
+  width: min(500px, 65vw);
   height: fit-content;
   max-height: 75vh;
   padding: 3vh;
@@ -36,13 +36,13 @@
   width: 95%;
   height: 6vh;
   font-size: 2.5vh;
-  margin-top: 2vh;
+  margin-top: min(2vh, 2vw);
   padding-left: 2vh;
 }
 
 .bookings .input {
   height: 4vh;
-  font-size: 3vh;
+  font-size: min(3vh, 4vw);
   padding-left: 0;
   padding-right: 2vh;
 }

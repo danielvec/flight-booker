@@ -8,8 +8,8 @@
 }
 
 .charges .form, .container {
-  height: 15vh;
-  width: min(430px, 43vw);
+  height: 22vh;
+  width: min(430px, 61vw);
   border-radius: 5px;
   padding: 4vh;
   font-size: 3vh;
