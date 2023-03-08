@@ -9,7 +9,7 @@
 
         <%= sub_form.text_field :last_name, required: true, placeholder: "Last Name" %><br>
 
-        <%= sub_form.text_field :email, required: true, placeholder: "Email Address" %><br>
+        <%= sub_form.text_field :email, required: true, type: "email", placeholder: "Email Address" %><br>
       <% end %>
       <%= form.submit "Submit", :class => "button" %>
     <% end %>
