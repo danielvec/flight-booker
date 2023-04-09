@@ -43,8 +43,9 @@ development:
   # If your server runs on a different port number, change accordingly.
   #port: 5432
 
-  host: /tmp
-  
+  host: /var/run/postgresql
+  port: 6983
+
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
 
