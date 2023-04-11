@@ -44,7 +44,7 @@ development:
   #port: 5432
 
   host: /tmp
-  port: 6983
+  port: 5491
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
